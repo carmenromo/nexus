@@ -35,6 +35,7 @@ GeometryFactory::~GeometryFactory()
 #include "Lab_vertices.h"
 #include "Lab.h"
 #include "PetBox.h"
+#include "BasicTestGeom.h"
 
 BaseGeometry* GeometryFactory::CreateGeometry() const
 {
@@ -49,6 +50,8 @@ BaseGeometry* GeometryFactory::CreateGeometry() const
   else if (name_ == "PETALO") p = new Lab();
 
   else if (name_ == "PETBOX") p = new PetBox();
+
+  else if (name_ == "TESTGEOM") p = new BasicTestGeom();
 
   else {
     G4String err = "The user selected an unknown geometry: " + name_;
