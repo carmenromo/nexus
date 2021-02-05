@@ -1,0 +1,35 @@
+### GEOMETRY
+/Geometry/BasicTestGeom/visibility true
+/Geometry/BasicTestGeom/lab_size 10. cm
+/Geometry/BasicTestGeom/source_pos_x 0. cm
+/Geometry/BasicTestGeom/source_pos_y 0. cm
+/Geometry/BasicTestGeom/source_pos_z 4. cm
+/Geometry/SiPMHamamatsuVUV_Test/sipm_size 10. cm
+
+
+### GENERATOR
+/Generator/SingleParticle/particle opticalphoton
+/Generator/SingleParticle/min_energy 4. eV
+/Generator/SingleParticle/max_energy 4. eV
+/Generator/SingleParticle/region AD_HOC
+/Generator/SingleParticle/min_costheta -1.
+/Generator/SingleParticle/max_costheta -0.9 #-0.7071
+
+#/Generator/Back2back/region AD_HOC
+#/Generator/Back2back/min_costheta -1.
+#/Generator/Back2back/max_costheta -0.9 #-0.7071
+
+### PHYSICS
+/process/optical/processActivation Scintillation true
+/process/optical/processActivation Cerenkov      true
+
+### VERBOSITIES
+/run/verbose 0
+/event/verbose 0
+/tracking/verbose 0
+
+/nexus/random_seed 132323
+
+### OUTPUT FILE
+/nexus/persistency/start_id 0
+/nexus/persistency/outputFile basic_test_geom.pet
